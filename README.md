@@ -88,8 +88,11 @@ endmodule
 **Output Waveform**
 
 2 bit Multiplexer
+
 ![image](https://github.com/Binnu-123/VLSI-LAB-EXP-3/assets/161333609/62ff7a95-f953-4e61-909e-12830edb9d31)
+
 4 bit multiplexer
+
 ![image](https://github.com/Binnu-123/VLSI-LAB-EXP-3/assets/161333609/c070ae84-8764-46b5-b691-fd70ed8be917)
 
 
