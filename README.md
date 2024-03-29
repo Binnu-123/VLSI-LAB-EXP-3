@@ -30,14 +30,72 @@ STEP:11  On the board, by giving required input, the LEDs starts to glow light, 
 
 
 **Verilog code**
-<<<< type your Verilog code here >>>>>>>
 
+2 bit Multiplexer
+```
+module ha(a,b,sum,carry);
+input a,b;
+output sum,carry;
+
+endmodule
+
+module multi_2(a,b,p,carry);
+input [1:0]a,b;
+output [2:0]p;
+output carry;
+
+endmodule
+```
+4 bit Multiplexer
+```
+module  ha(a,b,s,c);
+input a,b;
+output s,c;
+xor g1(s,a,b);
+and g2(c,a,b);
+endmodule
+module fa(a,b,c,sum,carry);
+input a,b,c;
+output sum ,carry;
+wire w1,w2,w3;
+xor g1(w1,a,b);
+xor g2(sum,w1,c);
+and g3(w2,w1,c); 
+and g4(w3,a,b);
+or g5(carry,w2,w3);
+endmodule
+
+module multiplier4bit(x,y,z);
+input [3:0]x,y;
+output [7:0]z;
+wire [17:1]w;
+and(z[0],x[0],y[0]);
+ha hal (x[1]&y[0],x[0]&y[1], z[1],w[1]);
+fa fal (x[2]&y[0],x[1]&y[1],w[1],w[5],w[2]);
+fa fa2 (x[3]&y[0],x[2]&y[1],w[2],w[6],w[3]);
+ha ha2 (x[3]&y[1],w[3],w[7],w[4]);
+ha ha3 (w[5], x[0]&y [2],z[2],w[8]); 
+fa fa3 (w[6],x[1]&y[2],w[8], w[12], w[9]);
+fa fa4 (w[7],x[2]&y[2],w[9],w[13],w[10]);
+fa fa5 (w[4],x[3]&y[2],w[10],w[14], w[11]);
+ha ha4 (w[12], x[0]&y[3], z[3], w[15]);
+fa fa6 (w[13],x[1]&y[3],w[15],z[4],w[16]);
+fa fa7 (w[14],x[2]&y[3],w[16], z[5],w[17]);
+fa fa8 (w[11],x[3]&y[3],w[17],z[6],z[7]);
+
+endmodule
+```
 **Output Waveform**
 
-<<< Simulation output waveform paste it here >>>>>
+2 bit Multiplexer
+![image](https://github.com/Binnu-123/VLSI-LAB-EXP-3/assets/161333609/62ff7a95-f953-4e61-909e-12830edb9d31)
+4 bit multiplexer
+![image](https://github.com/Binnu-123/VLSI-LAB-EXP-3/assets/161333609/c070ae84-8764-46b5-b691-fd70ed8be917)
 
 
 **Result**
+
+Hence the 2 bit multiplier and 4 bit multiplier are simulated and synthesised using Xilinx ISE.
 
 
 
