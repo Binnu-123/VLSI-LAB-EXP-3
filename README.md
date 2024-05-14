@@ -29,19 +29,12 @@ STEP:10 Double click on the Implement Design and double click on the Generate Pr
 
 STEP:11  On the board, by giving required input, the LEDs starts to glow light, indicating the output.
 
-**Logic Diagram**
-2 bit Multiplier
+LOGIC DIAGRAM OF 2 BIT MULTIPLEXER
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-3/assets/6987778/7713750f-65e6-41c0-8082-5005eac4031c)
 
-**4 Bit Multiplier**
+VERILOG CODE
 
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-3/assets/6987778/d95215dd-8cf1-4e08-93cc-96adfdd7fbdc)
-
-
-**Verilog code**
-# 2 bit Multiplexer
-```
 module ha(a,b,sum,c);
 input a,b;
 output sum,c;
@@ -56,9 +49,17 @@ and g1(c[0],b[0],a[0]);
 ha ha1(a[0]&b[1],a[1]&b[0],c[1],w1);
 ha ha2(a[1] &b[1],w1,c[2],c[3]);
 endmodule
-```
-# 4 bit Multiplexer
-```
+
+OUTPUT
+
+![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-3/assets/161333609/40f86c50-b247-48a9-9d16-ca508395a6cd)
+
+LOGIC DIAGRAM OF 4 BIT MULTIPLEXER
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXP-3/assets/6987778/d95215dd-8cf1-4e08-93cc-96adfdd7fbdc)
+
+VERILOG CODE
+
 module ha(a,b,c,s);
 input a,b;
 output s,c;
@@ -93,16 +94,11 @@ fa fa6(w[13],x[1]&y[3],w[15],z[4],w[16]);
 fa fa7(w[14],x[2]&y[3],w[16],z[5],w[17]);
 fa fa8(w[11],x[3]&y[3],w[17],z[6],z[7]);
 endmodule
-```
-**Output Waveform**
 
-2 bit Multiplexer
-
-![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-3/assets/161333609/40f86c50-b247-48a9-9d16-ca508395a6cd)
-
-4 bit multiplexer
+OUTPUT
 
 ![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-3/assets/161333609/6a08061e-d16d-449c-a8c6-d85f7e9605c3)
+
 
 
 **Result**
