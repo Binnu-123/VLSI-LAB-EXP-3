@@ -75,9 +75,6 @@ and g2(w2,a,b);
 
 
 
-
-
-
 xor g3(s,w1,c);
 and g4(w3,w1,c);
 or g5(carry,w3,w2);
