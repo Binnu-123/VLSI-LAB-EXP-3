@@ -100,9 +100,7 @@ endmodule
 ```
 
 OUTPUT
-
 ![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-3/assets/161333609/6a08061e-d16d-449c-a8c6-d85f7e9605c3)
-
 
 
 **Result**
