@@ -74,7 +74,6 @@ and g2(w2,a,b);
 
 
 
-
 xor g3(s,w1,c);
 and g4(w3,w1,c);
 or g5(carry,w3,w2);
@@ -98,6 +97,7 @@ fa fa7(w[14],x[2]&y[3],w[16],z[5],w[17]);
 fa fa8(w[11],x[3]&y[3],w[17],z[6],z[7]);
 endmodule
 ```
+
 
 OUTPUT
 ![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-3/assets/161333609/6a08061e-d16d-449c-a8c6-d85f7e9605c3)
